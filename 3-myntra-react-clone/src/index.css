@@ -388,3 +388,7 @@ a.action_container:link {
 .spinner {
   margin: 100px 0px;
 }
+.action_container {
+  text-decoration: none;
+  color: black;
+}
