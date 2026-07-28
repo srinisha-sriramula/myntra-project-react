@@ -19,6 +19,9 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #b6b1b1;
+
+  padding: 0 20px;
+  flex-wrap: wrap;
 }
 .myntra_home {
   height: 45px;
@@ -26,13 +29,15 @@ header {
 .logo_container {
   margin-left: 4%;
 }
-.action_bar {
-  margin-right: 4%;
-}
 .nav_bar {
   display: flex;
-  min-width: 500px;
-  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.action_bar {
+  display: flex;
+  gap: 20px;
 }
 .nav_bar a {
   font-size: 14px;
@@ -54,9 +59,9 @@ header {
 }
 
 .search_bar {
-  height: 40px;
-  min-width: 200px;
-  width: 30%;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 20px;
   display: flex;
   align-items: center;
 }
@@ -392,4 +397,3 @@ a.action_container:link {
   text-decoration: none;
   color: black;
 }
-
