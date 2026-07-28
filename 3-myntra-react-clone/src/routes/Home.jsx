@@ -9,7 +9,9 @@ const Home = () => {
     <>
       <main>
         <div className="items-container">
-          <HomeItem item={items[0]}></HomeItem>
+          {items.map((item) => (
+            <HomeItem key={item.id} item={item}></HomeItem>
+          ))}
         </div>
       </main>
     </>
