@@ -7,7 +7,6 @@ const FetchItems = () => {
   const fetchStatus = useSelector((store) => store.fetchStatus);
 
   const dispatch = useDispatch();
-  
 
   useEffect(() => {
     if (fetchStatus.fetchDone) return;
@@ -16,12 +15,12 @@ const FetchItems = () => {
     const signal = controller.signal;
     dispatch(fetchStatusActions.markFetchingStarted());
 
-    fetch("http://localhost:8080/items", { signal })
+    fetch("/data/items.json", { signal })
       .then((res) => res.json())
       .then(({ items }) => {
         dispatch(fetchStatusActions.markFetchDone());
         dispatch(fetchStatusActions.markFetchingFinished());
-        dispatch(itemsActions.addInitialItems(items[0]));
+        dispatch(itemsActions.addInitialItems(items));
       });
 
     return () => {
@@ -29,9 +28,6 @@ const FetchItems = () => {
     };
   }, [fetchStatus]);
 
-  return (
-    <>
-    </>
-  );
+  return <></>;
 };
 export default FetchItems;
