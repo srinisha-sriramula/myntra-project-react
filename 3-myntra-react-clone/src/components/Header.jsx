@@ -3,6 +3,8 @@ import { FaGrinHearts } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+
+import { FaSearch } from "react-icons/fa";
 const Header = () => {
   const bag = useSelector((store) => store.bag);
 
@@ -29,7 +31,7 @@ const Header = () => {
           </a>
         </nav>
         <div className="search_bar">
-          <span className="material-symbols-outlined search_icon">search</span>
+          <FaSearch />
           <input
             className="search_input"
             placeholder="Search for products, brands and more"
